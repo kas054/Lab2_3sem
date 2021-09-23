@@ -17,7 +17,7 @@ namespace Prog2 {
         double getB() const { return b; }
 
         double distance(double angle) const;
-        char * shape() const;
+        const char * shape() const;
         double area() const;
         char * formula() const;
         double *curvatureRadius() const;

@@ -16,10 +16,10 @@ namespace Prog2{
     {
         return abs(b + a * cos(angle));
     }
-    char * Limacon::shape() const
+    const char * Limacon::shape() const
     {
-        char *shape = "";
-        char *msg[] = {"Limacon is convex", "Limacon is dimpled", "Cardioid", "Limacon has an inner loop"};
+        const char *shape = "";
+        const char *msg[] = {"Limacon is convex", "Limacon is dimpled", "Cardioid", "Limacon has an inner loop"};
         if ( b >= 2 * a ) shape = msg[0];
         else if ( 2 * a > b && b > a ) shape = msg[1];
         else if ( b == a ) shape = msg[2];
@@ -30,11 +30,11 @@ namespace Prog2{
     {
         double area = M_PI * ( b * b - 0.5 * a * a);
         if ( b < a ) area -= ( b * b + 0.5 * a * a) * acos( b / a) - 1.5 * b * sqrt(a * a - b * b);
-        return area;
+        return abs(area);
     }
     char *Limacon::formula() const // (x^2 + y^2 - ax)^2 = b^2( x^2 + y^2 )
     {
-        char *s1 = "(x^2 + y^2 - x)^2 =  ^2(x^2 + y^2)";
+        const char *s1 = "(x^2 + y^2 - x)^2 =  ^2(x^2 + y^2)";
         int l = strlen(s1) + 1;
         size_t Size = 20;
         char num[20];

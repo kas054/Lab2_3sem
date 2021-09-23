@@ -3,4 +3,5 @@ project(Lab2_3sem)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Lab2_3sem main.cpp Limacon.cpp Limacon.h Dialog.cpp Dialog.h)
+add_executable(Lab2_3sem main.cpp Limacon.cpp Limacon.h Dialog.cpp Dialog.h )
+add_subdirectory(Google_tests)
